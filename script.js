@@ -35,7 +35,7 @@ class Calculator {
     }
 
     compute() {
-        let compuation;
+        let computation;
         const previous = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
         if (isNaN(previous) || isNaN(current)) {
@@ -43,21 +43,21 @@ class Calculator {
         }
         switch (this.operation) {
             case '+':
-                compuation = previous + current;
+                computation = previous + current;
                 break;
             case '-':
-                compuation = previous - current;
+                computation = previous - current;
                 break;
             case '*':
-                compuation = previous * current;
+                computation = previous * current;
                 break;
             case '÷':
-                compuation = previous / current;
+                computation = previous / current;
                 break;
             default:
                 return;
         }
-        this.currentOperand = compuation;
+        this.currentOperand = computation;
         this.operation = undefined;
         this.previousOperand = '';
     }
@@ -131,3 +131,5 @@ deleteButton.addEventListener('click' , button => {
     calculator.delete();
     calculator.updateDisplay();
 });
+
+// TODO:
